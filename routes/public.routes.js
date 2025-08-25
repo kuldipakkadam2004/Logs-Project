@@ -17,3 +17,5 @@ router.get('/', (req, res) => {
         message: "Welcome to the home page🏡"
     });
 });
+
+module.exports=router;

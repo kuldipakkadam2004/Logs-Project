@@ -1,8 +1,9 @@
+const util=require("../utils/token-utils");
 const authMiddleware = (req, res, next) => {
     const token = req.headers['authorization'];
     const userId = 1; //Hardcoded for demo
 
-    if (token && validateUserToken(userId, token)) {
+    if (token && util.validateUserToken(userId, token)) {
         req.user = { name: 'Suraj', id: userId };
         next();
     } else {
