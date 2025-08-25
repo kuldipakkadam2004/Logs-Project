@@ -1,24 +1,19 @@
 const express = require('express');
-const { generateToken } = require('../utils/token-utils.js');
-
 const router = express.Router();
 
+const { generateAndStoreToken } = require('../utils/token-utils.js');
 router.get('/generate-token', (req, res) => {
-    const token = generateToken();
-
+    const userId=1;
+    const token = generateAndStoreToken(userId); 
     res.status(200).send({
         message: "Token generated please save it for future use",
         token: token
     });
 });
 
+
 router.get('/', (req, res) => {
     res.status(200).send({
         message: "Welcome to the home page🏡"
     });
 });
-
-// Generate-token
-// Home route
-
-module.exports = router;
