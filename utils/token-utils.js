@@ -17,5 +17,5 @@ exports.validateUserToken = (userId, incomingToken) => {
     if (!savedToken) return false;
 
     //Simple equality check
-    return savedToken === incomingToken;
+    if(savedToken === incomingToken) return true;
 };
