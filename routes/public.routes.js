@@ -14,7 +14,7 @@ router.get('/generate-token', (req, res) => {
 
 router.get('/', (req, res) => {
     res.status(200).send({
-        message: "Welcome to the home page🏡"
+        message: "Welcome to the home page"
     });
 });
 

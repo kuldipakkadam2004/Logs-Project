@@ -12,10 +12,10 @@ if (!fs.existsSync(path.join(__dirname, 'logs'))) {
 }
 
    
-// * In-built Middleware
+//In-built Middleware
 app.use(express.json());
 
-// ! Global Custom Middleware 
+ 
 //here loggin every request
 const logMiddleware = require('./middleware/log.middleware.js');
 app.use(logMiddleware);

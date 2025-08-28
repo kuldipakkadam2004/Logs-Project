@@ -4,7 +4,7 @@ const authMiddleware = (req, res, next) => {
     const userId = 1; //Hardcoded for demo
 
     if (token && util.validateUserToken(userId, token)) {
-        req.user = { name: 'Suraj', id: userId };
+        req.user = { name: 'Kuldipak', id: userId };
         next();
     } else {
         res.status(401).send('Unauthorized: invalid or missing token');

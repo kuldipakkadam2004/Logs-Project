@@ -6,7 +6,7 @@ const router = express.Router();
 //dashboard (accesstoken)
 router.get('/dashboard', authMiddleware, (req, res) => {
     res.status(200).send({
-        message: `Welcome to the dashboard🏡 ${req.user.name}`,
+        message: `Welcome to the dashboard ${req.user.name}`,
     });
 });
 
